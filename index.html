@@ -31,17 +31,25 @@
         <hr>
 
         <section id="main_content">
-          <h2>
+          <h1>
+<a id="pybib-" class="anchor" href="#pybib-" aria-hidden="true"><span class="octicon octicon-link"></span></a>pybib <a href="https://pypi.python.org/pypi?:action=display&amp;name=pybib"><img src="https://img.shields.io/pypi/v/pybib.svg?style=flat" alt="PyPI version"></a>
+</h1>
+
+<p>pybib is a super-easy way to get citations for your LaTeX document. Instead of typing out BibTeX entries yourself, just give pybib the Digital Object Identifier (DOI) of the resource you want to cite and it will get all the information for you. Then, you can just add the citation it gives you to your BibTeX file. Easy!</p>
+
+<h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>To use this script, install the package using <code>pip</code> with the following command:</p>
+<p>This package is available on PyPi and can be installed with the following command:</p>
 
 <div class="highlight highlight-sh"><pre>$ pip3 install --user pybib</pre></div>
+
+<p>For user-only installs, pip installs scripts to the directory <code>~/.local/bin</code>, so make sure it's in your path.</p>
 
 <h2>
 <a id="usage-examples" class="anchor" href="#usage-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage examples</h2>
 
-<p>Retrieve a single citation:</p>
+<p>Get a citation:</p>
 
 <div class="highlight highlight-sh"><pre>$ bib 10.1112/plms/s2-42.1.230
 
@@ -59,18 +67,17 @@
     journal = {Proceedings of the London Mathematical Society}
 }</pre></div>
 
-<p>Retrieve a single citation and add it to a bibliography file:</p>
+<p>Get a citation and add it to your bibliography file:</p>
 
 <div class="highlight highlight-sh"><pre>$ bib 10.1145/159544.159617 <span class="pl-k">&gt;&gt;</span> citations.bib</pre></div>
 
-<p>Retrieve a single citation and add it to a bibliography file, running it through <code>bibtool</code> first to format the entry and auto-generate a citation key:</p>
+<p>Get a citation and add it to your bibliography file, running it through <code>bibtool</code> first to format the entry and auto-generate a citation key:</p>
 
 <div class="highlight highlight-sh"><pre>$ bib 10.1145/159544.159617 <span class="pl-k">|</span> bibtool <span class="pl-k">&gt;&gt;</span> citations.bib</pre></div>
 
 <p>Convert a file containing a list of DOIs into a bibliography file:</p>
 
-<pre><code>$ bib -f citations.doi
-</code></pre>
+<div class="highlight highlight-sh"><pre>$ bib -f citations.doi</pre></div>
 
 <h2>
 <a id="troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Troubleshooting</h2>
