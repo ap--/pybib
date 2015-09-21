@@ -5,7 +5,7 @@
     <title>pybib by jgilchrist</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
@@ -20,53 +20,70 @@
 
     <section class="main-content">
       <h1>
-<a id="pybib-" class="anchor" href="#pybib-" aria-hidden="true"><span class="octicon octicon-link"></span></a>pybib <a href="https://pypi.python.org/pypi?:action=display&amp;name=pybib"><img src="https://img.shields.io/pypi/v/pybib.svg?style=flat" alt="PyPI version"></a>
+<a id="pybib-" class="anchor" href="#pybib-" aria-hidden="true"><span class="octicon octicon-link"></span></a>pybib <a href="https://pypi.python.org/pypi/pybib/2.2.1"><img src="https://img.shields.io/pypi/v/pybib.svg" alt="PyPI"></a>
 </h1>
 
-<p>pybib is a super-easy way to get citations for your LaTeX document. Instead of typing out BibTeX entries yourself, just give pybib the Digital Object Identifier (DOI) of the resource you want to cite and it will get all the information for you. Then, you can just add the citation it gives you to your BibTeX file. Easy!</p>
+<p>pybib is a super-easy way to get citations for your LaTeX document.
+Instead of typing out BibTeX entries yourself, just give pybib the
+Digital Object Identifier (DOI) of the resource you want to cite and it
+will get all the information for you. Then, you can just add the
+citation it gives you to your BibTeX file. Easy!</p>
+
+<h2>
+<a id="demo" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
+
+<p><a href="https://asciinema.org/a/d28uzeuzswvbzvd1itd5gd1gi"><img src="https://asciinema.org/a/d28uzeuzswvbzvd1itd5gd1gi.png" alt="asciicast"></a></p>
 
 <h2>
 <a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>The package is available on PyPi and can be installed with the following command:</p>
+<p>The package is available on PyPi and can be installed with the following
+command:</p>
 
-<div class="highlight highlight-sh"><pre>$ pip3 install --user pybib</pre></div>
+<pre lang="sourceCode"><code>$ pip3 install --user pybib
+</code></pre>
 
-<p>For user-only installs, pip installs scripts to the directory <code>~/.local/bin</code>, so make sure it's in your path. If you would prefer to install it system-wide, just leave out the <code>--user</code> flag.</p>
+<p>For user-only installs, pip installs scripts to the directory
+<code>~/.local/bin</code>, so make sure it’s in your path. If you would prefer to
+install it system-wide, just leave out the <code>--user</code> flag.</p>
 
 <h2>
 <a id="usage-examples" class="anchor" href="#usage-examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage examples</h2>
 
-<h3>
-<a id="retrieving-citations" class="anchor" href="#retrieving-citations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Retrieving citations</h3>
-
 <p>Get a citation:</p>
 
-<div class="highlight highlight-sh"><pre>$ bib get 10.1112/plms/s2-42.1.230</pre></div>
+<pre lang="sourceCode"><code>$ bib get 10.1112/plms/s2-42.1.230
+</code></pre>
 
 <p>Get a citation and add it to your bibliography file:</p>
 
-<div class="highlight highlight-sh"><pre>$ bib get 10.1145/159544.159617 <span class="pl-k">&gt;&gt;</span> citations.bib</pre></div>
+<pre lang="sourceCode"><code>$ bib get 10.1145/159544.159617 &gt;&gt; citations.bib
+</code></pre>
 
-<p>Get a citation and add it to your bibliography file, running it through <code>bibtool</code> first to format the entry and auto-generate a citation key:</p>
+<p>Get a citation and add it to your bibliography file, running it through
+<code>bibtool</code> first to format the entry and auto-generate a citation key:</p>
 
-<div class="highlight highlight-sh"><pre>$ bib get 10.1145/159544.159617 <span class="pl-k">|</span> bibtool <span class="pl-k">&gt;&gt;</span> citations.bib</pre></div>
+<pre lang="sourceCode"><code>$ bib get 10.1145/159544.159617 | bibtool &gt;&gt; citations.bib
+</code></pre>
 
-<h3>
-<a id="searching" class="anchor" href="#searching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Searching</h3>
+<h2>
+<a id="searching" class="anchor" href="#searching" aria-hidden="true"><span class="octicon octicon-link"></span></a>Searching</h2>
 
 <p>Search for a resource:</p>
 
-<div class="highlight highlight-sh"><pre>$ bib search name of the resource</pre></div>
+<pre lang="sourceCode"><code>$ bib search name of the resource
+</code></pre>
 
 <p>Get the citation for search result number <code>N</code>:</p>
 
-<div class="highlight highlight-sh"><pre>$ bib search name of the resource --get N</pre></div>
+<pre lang="sourceCode"><code>$ bib search name of the resource --get N
+</code></pre>
 
 <h2>
 <a id="troubleshooting" class="anchor" href="#troubleshooting" aria-hidden="true"><span class="octicon octicon-link"></span></a>Troubleshooting</h2>
 
-<p>If you encounter any problems, please open an issue so I can rectify them as soon as possible.</p>
+<p>If you encounter any problems, please open an issue so I can rectify
+them as soon as possible.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/jgilchrist/pybib">pybib</a> is maintained by <a href="https://github.com/jgilchrist">jgilchrist</a>.</span>
@@ -79,4 +96,3 @@
   
   </body>
 </html>
-
